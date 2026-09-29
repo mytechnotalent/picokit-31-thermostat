@@ -1,0 +1,68 @@
+{
+  "repo": "picokit-31-thermostat",
+  "eyebrow": "PICOKIT // LESSON 31",
+  "title": "PICOKIT // THERMOSTAT",
+  "subtitle": "HYSTERESIS VENT + IR SETPOINT + AUTHENTICATED HEARTBEAT",
+  "accent": "#FF249A",
+  "dim": "#9E165F",
+  "white": "#F3D7F0",
+  "cyan": "#7FD8E0",
+  "bg": "#11020A",
+  "bg_edge": "#050003",
+  "icon": "thermo",
+  "panel_status": "TEMP 23.0C  ·  SET 20.0C  ·  VENT 90",
+  "chips": [
+    {
+      "label": "TEMP",
+      "value": "23.0 C"
+    },
+    {
+      "label": "SET",
+      "value": "20.0 C"
+    },
+    {
+      "label": "VENT",
+      "value": "90 deg"
+    },
+    {
+      "label": "RADIO",
+      "value": "-34 dBm"
+    }
+  ],
+  "terminal": [
+    "$ gateway listen /dev/cu.usbserial-A50285BI",
+    "[*] node 00031  seq 18  HEARTBEAT  AEAD ok",
+    "[*] anti-replay window ok  counter 18",
+    "[+] temp 23.0 set 20.0 vent open 90 deg",
+    "[+] remote 0x45 set 26.5 vent closed  ack sent"
+  ],
+  "categories": [
+    "THERMO",
+    "VENT",
+    "SECURE",
+    "LINK"
+  ],
+  "cards": [
+    {
+      "tag": "TH-01",
+      "label": "open",
+      "value": "90 deg"
+    },
+    {
+      "tag": "TH-02",
+      "label": "hold",
+      "value": "+/-1.0 C"
+    },
+    {
+      "tag": "TH-03",
+      "label": "close",
+      "value": "0 deg"
+    }
+  ],
+  "footer": [
+    "1 NODE  ·  1 GATEWAY  ·  2 WAY LORA  ·  NO PLAINTEXT",
+    "PICOKIT SERIES  ·  OUTPUT  ·  INPUT  ·  RADIO  ==[ THERMO ]=="
+  ],
+  "layout": "panel",
+  "stat": "23.0 C"
+}
